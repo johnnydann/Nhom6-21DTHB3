@@ -1,0 +1,655 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Progress Bar */
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background-color: #e94560;
+    width: 0;
+    z-index: 3000;
+    transition: width 0.3s ease;
+}
+
+/* Thanh điều hướng */
+.navbar {
+    background-color: #1a1a2e;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #e94560;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 40px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e94560;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.theme-toggle {
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: #e94560;
+}
+
+/* Phần đầu trang */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #16213e, #e94560);
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+/* Hiệu ứng animation */
+.animate-text { animation: fadeInUp 1s ease-out; }
+.animate-btn { animation: fadeInUp 1.5s ease-out; }
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Nút bấm */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #e94560;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #e94560;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Phần giới thiệu */
+.about {
+    padding: 120px 0;
+    background-color: #fff;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #16213e;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #e94560;
+    transition: transform 0.4s ease;
+}
+
+.animate-img { animation: fadeInLeft 1s ease-out; }
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.profile-img:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.skills {
+    margin-top: 30px;
+}
+
+.skills h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #16213e;
+}
+
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-item span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    background-color: #e94560;
+    height: 100%;
+    width: 0;
+    animation: skillAnimate 2s ease forwards;
+}
+
+@keyframes skillAnimate {
+    from { width: 0; }
+    to { width: inherit; }
+}
+
+/* Phần dịch vụ */
+.services {
+    padding: 120px 0;
+    background-color: #f5f6fa;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #16213e;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.service-item {
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-item i {
+    font-size: 40px;
+    color: #e94560;
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #16213e;
+}
+
+.service-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Phần dự án */
+.projects {
+    padding: 120px 0;
+    background-color: #fff;
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #16213e;
+}
+
+.project-filter {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: #e94560;
+    color: white;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.project-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.project-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 46, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-overlay h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-overlay button {
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: #e94560;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project-overlay button:hover {
+    background-color: #fff;
+    color: #e94560;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+}
+
+.project-item:hover .project-img {
+    opacity: 0.7;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+/* Phần đánh giá */
+.testimonials {
+    padding: 120px 0;
+    background-color: #f5f6fa;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #16213e;
+}
+
+.testimonial-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial-item {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.testimonial-item.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.testimonial-item p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.testimonial-item h4 {
+    font-size: 16px;
+    color: #e94560;
+}
+
+.slider-nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slider-nav button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #16213e;
+    cursor: pointer;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+}
+
+.slider-nav button:hover {
+    color: #e94560;
+}
+
+/* Phần liên hệ */
+.contact {
+    padding: 120px 0;
+    background-color: #f5f6fa;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #16213e;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 25px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #e94560;
+    outline: none;
+}
+
+textarea {
+    height: 180px;
+}
+
+/* Chân trang */
+footer {
+    background-color: #1a1a2e;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #e94560;
+}
+
+#live-clock {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #e94560;
+}
+
+/* Back to Top */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #e94560;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #fff;
+    color: #e94560;
+    transform: scale(1.1);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #16213e;
+}
+
+#modal-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar,
+body.dark-mode footer {
+    background-color: #0a0a0a;
+}
+
+body.dark-mode .about,
+body.dark-mode .projects,
+body.dark-mode .testimonials {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .services,
+body.dark-mode .contact {
+    background-color: #262626;
+}
+
+body.dark-mode .service-item,
+body.dark-mode .modal-content,
+body.dark-mode .testimonial-item {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+body.dark-mode h2,
+body.dark-mode .service-item h3,
+body.dark-mode .project-overlay h3 {
+    color: #e94560;
+}
+
+body.dark-mode .skill-bar {
+    background-color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1a1a2e;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .services-grid, .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+}

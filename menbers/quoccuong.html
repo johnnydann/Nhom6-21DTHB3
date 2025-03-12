@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Của Tôi</title>
+    <link rel="stylesheet" href="quoccuong.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Thanh điều hướng -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Portfolio</h1>
+            <ul class="nav-links">
+                <li><a href="#trangchu">Trang Chủ</a></li>
+                <li><a href="#gioithieu">Giới Thiệu</a></li>
+                <li><a href="#dichvu">Dịch Vụ</a></li>
+                <li><a href="#duan">Dự Án</a></li>
+                <li><a href="#lienhe">Liên Hệ</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Phần đầu trang -->
+    <section id="trangchu" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1 class="typing-text"></h1>
+            <p class="animate-text">Nhà Phát Triển Web & Thiết Kế Chuyên Nghiệp</p>
+            <a href="#lienhe" class="btn animate-btn">Liên Hệ Ngay</a>
+        </div>
+    </section>
+
+    <!-- Phần giới thiệu -->
+    <section id="gioithieu" class="about">
+        <div class="container">
+            <h2>Nguyễn Quốc Cường 2180606094</h2>
+            <div class="about-content">
+                <img src="../images/avata.jpg" alt="Hình ảnh cá nhân" class="profile-img animate-img">
+                <div>
+                    <p>Tôi là Nguyễn Quốc Cường một nhà phát triển web đam mê với hơn 4 năm kinh nghiệm tạo ra các website thân thiện với người dùng và responsive. Tôi chuyên về công nghệ web hiện đại và thiết kế tối ưu.</p>
+                    <div class="skills">
+                        <h3>Kỹ Năng</h3>
+                        <div class="skill-item">
+                            <span>HTML/CSS</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần dịch vụ -->
+    <section id="dichvu" class="services">
+        <div class="container">
+            <h2>Dịch Vụ Của Tôi</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Thiết Kế Web</h3>
+                    <p>Tạo ra các thiết kế website đẹp mắt và tiện dụng.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-code"></i>
+                    <h3>Phát Triển Web</h3>
+                    <p>Xây dựng website nhanh chóng và responsive.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-tools"></i>
+                    <h3>Bảo Trì</h3>
+                    <p>Hỗ trợ và cập nhật website liên tục.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần dự án -->
+    <section id="duan" class="projects">
+        <div class="container">
+            <h2>Dự Án Của Tôi</h2>
+            <div class="project-filter">
+                <button class="filter-btn active" data-filter="all">Tất Cả</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">App</button>
+                <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-item" data-category="web">
+                    <img src="../images/anh2.jpg" alt="Dự án 1" class="project-img">
+                    <div class="project-overlay">
+                        <h3>Dự Án 1</h3>
+                        <p>Một website thương mại điện tử với thiết kế hiện đại.</p>
+                        <button class="view-details">Xem Chi Tiết</button>
+                    </div>
+                </div>
+                <div class="project-item" data-category="app">
+                    <img src="../images/anh2.jpg" alt="Dự án 2" class="project-img">
+                    <div class="project-overlay">
+                        <h3>Dự Án 2</h3>
+                        <p>Ứng dụng web quản lý doanh nghiệp nhỏ.</p>
+                        <button class="view-details">Xem Chi Tiết</button>
+                    </div>
+                </div>
+                <div class="project-item" data-category="portfolio">
+                    <img src="../images/anh2.jpg" alt="Dự án 3" class="project-img">
+                    <div class="project-overlay">
+                        <h3>Dự Án 3</h3>
+                        <p>Portfolio cá nhân với giao diện tối giản.</p>
+                        <button class="view-details">Xem Chi Tiết</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần đánh giá -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Đánh Giá Từ Khách Hàng</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-item active">
+                    <p>"Công việc tuyệt vời! Website rất đẹp và chuyên nghiệp."</p>
+                    <h4>Nguyễn Văn A</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Dịch vụ nhanh chóng và đáng tin cậy."</p>
+                    <h4>Trần Thị B</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"Thiết kế sáng tạo, rất hài lòng!"</p>
+                    <h4>Lê Văn C</h4>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần liên hệ -->
+    <section id="lienhe" class="contact">
+        <div class="container">
+            <h2>Liên Hệ Với Tôi</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Tên của bạn" required>
+                <input type="email" id="email" placeholder="Email của bạn" required>
+                <textarea id="message" placeholder="Tin nhắn của bạn" required></textarea>
+                <button type="submit" class="btn">Gửi Tin Nhắn</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Chân trang -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Portfolio Của Tôi. Bản quyền thuộc về tôi.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div id="live-clock"></div>
+        </div>
+    </footer>
+
+    <!-- Nút Back to Top -->
+    <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Modal Popup -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">×</span>
+            <h3 id="modal-title"></h3>
+            <img id="modal-img" src="" alt="Dự án">
+            <p id="modal-desc"></p>
+        </div>
+    </div>
+
+    <script>
+        // Typing Animation
+        const text = "Chào Mừng Đến Với Portfolio Của Tôi";
+        let index = 0;
+        const typingText = document.querySelector('.typing-text');
+        function type() {
+            if (index < text.length) {
+                typingText.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 100);
+            }
+        }
+        window.onload = type;
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Dark mode toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            themeToggle.innerHTML = document.body.classList.contains('dark-mode') 
+                ? '<i class="fas fa-sun"></i>' 
+                : '<i class="fas fa-moon"></i>';
+        });
+
+        // Back to top
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('progress-bar').style.width = scrollPercent + '%';
+        });
+
+        // Project filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.getAttribute('data-filter');
+                projectItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal popup
+        const modal = document.getElementById('project-modal');
+        const viewDetails = document.querySelectorAll('.view-details');
+        const closeModal = document.querySelector('.close-modal');
+        viewDetails.forEach(button => {
+            button.addEventListener('click', () => {
+                const project = button.parentElement;
+                document.getElementById('modal-title').textContent = project.querySelector('h3').textContent;
+                document.getElementById('modal-img').src = project.querySelector('img').src;
+                document.getElementById('modal-desc').textContent = project.querySelector('p').textContent;
+                modal.style.display = 'block';
+            });
+        });
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Form validation
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            if (name && email.includes('@') && message) {
+                alert('Tin nhắn đã được gửi thành công!');
+                form.reset();
+            } else {
+                alert('Vui lòng điền đầy đủ và đúng định dạng!');
+            }
+        });
+
+        // Testimonials slider
+        const testimonialItems = document.querySelectorAll('.testimonial-item');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let currentTestimonial = 0;
+        function showTestimonial(index) {
+            testimonialItems.forEach((item, i) => {
+                item.classList.toggle('active', i === index);
+            });
+        }
+        prevBtn.addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial - 1 + testimonialItems.length) % testimonialItems.length;
+            showTestimonial(currentTestimonial);
+        });
+        nextBtn.addEventListener('click', () => {
+            currentTestimonial = (currentTestimonial + 1) % testimonialItems.length;
+            showTestimonial(currentTestimonial);
+        });
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonialItems.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+
+        // Live clock
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('live-clock').textContent = now.toLocaleTimeString('vi-VN');
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
