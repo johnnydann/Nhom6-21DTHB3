@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Của Tôi</title>
-    <link rel="stylesheet" href="quoccuong.css">
+    <link rel="stylesheet" href="../quoccuong.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Progress Bar -->
     <div id="progress-bar"></div>
@@ -49,16 +51,22 @@
             <div class="about-content">
                 <img src="../images/avata.jpg" alt="Hình ảnh cá nhân" class="profile-img animate-img">
                 <div>
-                    <p>Tôi là Nguyễn Quốc Cường một nhà phát triển web đam mê với hơn 4 năm kinh nghiệm tạo ra các website thân thiện với người dùng và responsive. Tôi chuyên về công nghệ web hiện đại và thiết kế tối ưu.</p>
+                    <p>Tôi là Nguyễn Quốc Cường một nhà phát triển web đam mê với hơn 4 năm kinh nghiệm tạo ra các
+                        website thân thiện với người dùng và responsive. Tôi chuyên về công nghệ web hiện đại và thiết
+                        kế tối ưu.</p>
                     <div class="skills">
                         <h3>Kỹ Năng</h3>
                         <div class="skill-item">
                             <span>HTML/CSS</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
                         </div>
                         <div class="skill-item">
                             <span>JavaScript</span>
-                            <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
                         </div>
 
                     </div>
@@ -210,7 +218,7 @@
 
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
@@ -229,8 +237,8 @@
         const themeToggle = document.querySelector('.theme-toggle');
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            themeToggle.innerHTML = document.body.classList.contains('dark-mode') 
-                ? '<i class="fas fa-sun"></i>' 
+            themeToggle.innerHTML = document.body.classList.contains('dark-mode')
+                ? '<i class="fas fa-sun"></i>'
                 : '<i class="fas fa-moon"></i>';
         });
 
@@ -342,4 +350,5 @@
         updateClock();
     </script>
 </body>
+
 </html>
